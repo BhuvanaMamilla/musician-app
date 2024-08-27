@@ -7,17 +7,14 @@ phases:
     commands:
       - echo Installing NPM dependencies...
       - npm install
-
   build:
     commands:
       - echo Building the application...
-      - npm run build
-
+      # If you have a build command, uncomment and use it
+      # - npm run build
   post_build:
     commands:
       - echo Build completed on `date`
-
 artifacts:
-  base-directory: dist
   files:
     - '**/*'
